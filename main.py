@@ -1,6 +1,7 @@
 from objet.Terrain import Terrain
 from objet.personnage import Personage
 import time
+import keyboard
 
 def jeu():
     joueur = Personage('philipe', 'joueur', (0, 0))
