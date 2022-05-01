@@ -12,11 +12,10 @@ class Terrain:
                       [0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 1, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0],
-                      [0, 0, 0, 0, 0, 0, 0],]
+                      [0, 0, 0, 0, 0, 0, 0]]
 
         self.affiche = deepcopy(self.terrain)
         self.affiche_modif(joueur.x,joueur.y,joueur.pion, False) ##affiche le joueur
-
 
     def modif_terain(self,x,y,modification):
         '''modifie directement le terrain'''
@@ -28,9 +27,7 @@ class Terrain:
 
     def affiche_modif(self,x,y,affichage, a_changer):
         '''modifie l'affichage par exemple quand le joueur se déplace'''
-        print(a_changer)
+
         self.affiche[x][y] = affichage
         if a_changer:
-            print('cc')
-            print(self.terrain[a_changer[0]][a_changer[1]])
             self.affiche[a_changer[0]][a_changer[1]] = self.terrain[a_changer[0]][a_changer[1]]
