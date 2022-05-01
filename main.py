@@ -14,8 +14,6 @@ def jeu():
     terrain = Terrain(joueur)
     arret = False
     affichage_terrain(terrain)
-    print(terrain.affiche[0][6])
-    print(terrain.affiche[6][0])
     while not arret:
         lettre = keyboard.read_key()
         if lettre == 'd':
@@ -30,7 +28,7 @@ def jeu():
         elif lettre == 's':
             joueur.deplacement_bas(terrain)
             affichage_terrain(terrain)
-        sleep(1)
+        sleep(0.5)
 
 
 jeu()
