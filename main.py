@@ -1,6 +1,6 @@
 from objet.Terrain import Terrain
 from objet.personnage import Personage
-import time
+from time import sleep
 import keyboard
 
 def jeu():
@@ -9,9 +9,16 @@ def jeu():
     arret = False
     while not arret:
         print(terrain.affiche)
-        if input('direction?')=='d':
+        lettre = keyboard.read_key()
+        if lettre == 'd':
             joueur.deplacement_droit(terrain)
-        time.sleep(1)
+        elif lettre == 'q':
+            joueur.deplacement_gauche(terrain)
+        elif lettre == 'z':
+            joueur.deplacement_haut(terrain)
+        elif lettre == 's':
+            joueur.deplacement_bas(terrain)
+        sleep(1)
 
 
 jeu()
