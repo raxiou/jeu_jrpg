@@ -1,15 +1,14 @@
 class Personage:
-    def __init__(self, nom, type, position):
+    def __init__(self, nom, position, representation):
         '''class qui permet de créer les personnage
         nom et le nom de celui ci
         type est son espèce/role
         position est ca position sous forme de tuple par exemple: (1,0) pour x=1 et y =0
         pion est ca représentation dans l'affichage'''
         self.nom = nom
-        self.type = type
         self.x = position[0]
         self.y = position[1]
-        self.pion = 'X'
+        self.pion = representation
 
     def affichage(self, Terrain, encienne_coordonne):
         '''modifie l'affichage du terrain'''

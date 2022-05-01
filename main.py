@@ -10,7 +10,10 @@ def affichage_terrain(terrain):
 
 
 def jeu():
-    joueur = Personage('philipe', 'joueur', (0, 0))
+    joueur = Personage('philipe', (0, 0), 'X')
+
+    monstre = Personage('blob_1', (4,3), 'O')
+
     terrain = Terrain(joueur)
     arret = False
     affichage_terrain(terrain)
